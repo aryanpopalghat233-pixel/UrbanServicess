@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URBANSERVICE - Home Services Booking</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">🏠 URBANSERVICE</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="#" onclick="goToLogin()">Book Service</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="auth-buttons">
+        <button onclick="showLoginModal('user')" class="btn btn-outline">Login</button>
+        <button onclick="showSignupModal('user')" class="btn btn-primary">Signup</button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Home Services, On Demand</h1>
+      <p>Book trusted home services in minutes</p>
+      <button onclick="goToServices()" class="btn btn-primary btn-lg">Explore Services</button>
+    </div>
+  </header>
+
+  <section class="services-preview">
+    <div class="container">
+      <h2>Popular Services</h2>
+      <div class="services-grid" id="servicesGrid"></div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="container">
+      <h2>What Our Customers Say</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p>"Amazing service! Plumber fixed my issue in 30 minutes."</p>
+          <span>- Rajesh Kumar</span>
+        </div>
+        <div class="testimonial-card">
+          <p>"Professional and affordable. Highly recommend!"</p>
+          <span>- Priya Singh</span>
+        </div>
+        <div class="testimonial-card">
+          <p>"Best cleaning service I've used. Very satisfied!"</p>
+          <span>- Amit Patel</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2>Are you a service professional?</h2>
+      <button onclick="showWorkerSignup()" class="btn btn-primary btn-lg">Apply Now</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 URBANSERVICE. All rights reserved.</p>
+  </footer>
+
+  <!-- Auth Modal -->
+  <div id="authModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('authModal')">&times;</span>
+      <div id="authForm"></div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

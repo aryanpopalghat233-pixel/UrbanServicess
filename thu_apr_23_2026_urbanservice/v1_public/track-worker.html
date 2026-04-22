@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Worker - URBANSERVICE</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">🏠 URBANSERVICE</div>
+      <a href="index.html" class="btn btn-outline">Home</a>
+    </div>
+  </nav>
+
+  <section class="tracking-section">
+    <div class="container">
+      <h1>Track Your Worker</h1>
+      <div id="map" style="height: 600px; border-radius: 10px;"></div>
+      <div class="worker-info">
+        <p>Worker: <span id="workerName">-</span></p>
+        <p>Status: <span id="status">-</span></p>
+        <p>ETA: <span id="eta">-</span></p>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/map.js"></script>
+</body>
+</html>

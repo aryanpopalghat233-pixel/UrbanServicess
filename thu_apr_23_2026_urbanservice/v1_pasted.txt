@@ -1,0 +1,73 @@
+Create a full-stack responsive home service booking website similar to Urban Company called "URBANSERVICE".
+
+The website must include the following features:
+
+1. Homepage
+- Banner with logo
+- Service categories 
+- Search services
+- Customer testimonials
+- CTA buttons for booking services
+
+2. Service Booking System
+- Service selection
+- Date & time selection
+- Address input
+- Customer details
+- Booking confirmation
+- Store booking data in a free database
+
+3. Worker Dashboard
+- Worker login
+- View assigned jobs
+- Update job status (Accepted, On the way, Completed)
+
+4. Live Worker Tracking
+- Use Leaflet.js map
+- Show worker live GPS location
+- Update location every few seconds
+- Customer can track worker location after booking
+
+5. Job Application Page
+- Worker registration form
+- Upload name, phone, skills, city
+- Upload ID proof
+- Store data in database
+
+6. Admin Dashboard
+- View bookings
+- View workers
+- Assign workers to jobs
+- Track worker location
+
+7. Pages Required
+- Home
+- Services
+- Book Service
+- Track Worker
+- Worker Apply
+- Worker Dashboard
+- Admin Panel
+- Contact
+
+Technical Requirements:
+- HTML
+- CSS
+- JavaScript
+- Leaflet.js for maps
+- Node.js + Express backend
+- MongoDB database (free tier)
+- Use OpenStreetMap tiles with Leaflet
+- Fully responsive
+- Clean UI similar to Urban Company
+
+Add features:
+- Login / signup for users
+- Worker authentication
+- Real-time worker location updates
+- Booking history
+- Simple admin management panel
+
+Use ONLY free tools.
+
+You may also require codes and folder structure to complete the website and run it smoothly with your data stored in MongoDB. 

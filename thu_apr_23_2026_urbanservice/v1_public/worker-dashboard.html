@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Worker Dashboard - URBANSERVICE</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">🏠 URBANSERVICE</div>
+      <button onclick="logout()" class="btn btn-outline">Logout</button>
+    </div>
+  </nav>
+
+  <section class="dashboard-section">
+    <div class="container">
+      <h1>Worker Dashboard</h1>
+      
+      <div class="dashboard-grid">
+        <div class="card">
+          <h3>Total Jobs: <span id="totalJobs">0</span></h3>
+        </div>
+        <div class="card">
+          <h3>Rating: <span id="rating">0</span>⭐</h3>
+        </div>
+        <div class="card">
+          <h3>Status: <span id="status">Offline</span></h3>
+          <button onclick="toggleStatus()" class="btn btn-primary">Go Online</button>
+        </div>
+      </div>
+
+      <h2>Assigned Jobs</h2>
+      <div id="jobsList"></div>
+    </div>
+  </section>
+
+  <script src="js/worker.js"></script>
+</body>
+</html>

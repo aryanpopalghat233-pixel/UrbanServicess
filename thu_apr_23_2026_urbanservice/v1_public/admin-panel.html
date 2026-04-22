@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel - URBANSERVICE</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">🏠 URBANSERVICE</div>
+      <button onclick="logout()" class="btn btn-outline">Logout</button>
+    </div>
+  </nav>
+
+  <section class="admin-section">
+    <div class="container">
+      <h1>Admin Panel</h1>
+
+      <div class="tabs">
+        <button class="tab-button active" onclick="switchTab('bookings')">Bookings</button>
+        <button class="tab-button" onclick="switchTab('workers')">Workers</button>
+      </div>
+
+      <div id="bookings" class="tab-content">
+        <h2>All Bookings</h2>
+        <table id="bookingsTable" class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Service</th>
+              <th>Date</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="bookingsBody"></tbody>
+        </table>
+      </div>
+
+      <div id="workers" class="tab-content" style="display:none;">
+        <h2>All Workers</h2>
+        <table id="workersTable" class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Skills</th>
+              <th>City</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="workersBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>

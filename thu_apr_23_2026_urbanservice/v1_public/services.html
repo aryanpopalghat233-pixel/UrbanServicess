@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - URBANSERVICE</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">🏠 URBANSERVICE</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="book-service.html">Book Service</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="services-full">
+    <div class="container">
+      <h1>All Services</h1>
+      <div class="services-grid" id="servicesGrid"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 URBANSERVICE. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    async function loadServices() {
+      try {
+        const response = await fetch('/api/services');
+        const services = await response.json();
+        
+        const grid = document.getElementById('servicesGrid');
+        grid.innerHTML = services.map(service => `
+          <div class="service-card">
+            <div class="service-icon">${service.icon}</div>
+            <h3>${service.name}</h3>
+            <p>₹${service.price}</p>
+            <button onclick="bookService('${service.name}')" class="btn btn-primary">Book Now</button>
+          </div>
+        `).join('');
+      } catch (error) {
+        console.error('Error loading services:', error);
+      }
+    }
+
+    function bookService(serviceName) {
+      const token = localStorage.getItem('token');
+      if (!token) {
+        alert('Please login first');
+        return;
+      }
+      window.location.href = `book-service.html?service=${serviceName}`;
+    }
+
+    loadServices();
+  </script>
+</body>
+</html>
