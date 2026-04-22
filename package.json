@@ -1,19 +1,5 @@
-{
-  "name": "urban-services",
-  "version": "1.0.0",
-  "description": "Urban Services Application",
-  "main": "v1_server.js",
-  "scripts": {
-    "start": "node v1_server.js",
-    "dev": "nodemon v1_server.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.18.2"
-  },
-  "devDependencies": {
-    "nodemon": "^3.0.1"
-  }
+"main": "src/v1_server.js",
+"scripts": {
+  "start": "node src/v1_server.js",
+  "dev": "nodemon src/v1_server.js"
 }
